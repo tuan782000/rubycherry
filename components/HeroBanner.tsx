@@ -76,16 +76,22 @@ const HeroBanner: React.FC = () => {
                                 {slide.subtitle}
                             </p>
                             <div className='flex flex-col sm:flex-row gap-4'>
-                                <button className='bg-white text-red-700 px-10 py-5 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-red-50 transition-all shadow-2xl hover:scale-105 active:scale-95 group'>
+                                <a
+                                    href='#products'
+                                    className='bg-white text-red-700 px-10 py-5 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-red-50 transition-all shadow-2xl hover:scale-105 active:scale-95 group'
+                                >
                                     KHÁM PHÁ NGAY
                                     <ArrowRight
                                         className='transition-transform group-hover:translate-x-1'
                                         size={20}
                                     />
-                                </button>
-                                <button className='border border-white/40 backdrop-blur-md text-white px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all'>
+                                </a>
+                                <a
+                                    href='#why-us'
+                                    className='border border-white/40 backdrop-blur-md text-white px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all'
+                                >
                                     TÌM HIỂU THÊM
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
