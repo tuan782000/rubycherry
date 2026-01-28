@@ -93,7 +93,7 @@ const HeroBanner: React.FC = () => {
             ))}
 
             {/* Navigation Arrows */}
-            <div className='absolute bottom-12 right-4 md:right-12 z-30 flex gap-4'>
+            <div className='absolute bottom-12 right-4 md:right-12 z-30 hidden md:flex gap-4'>
                 <button
                     onClick={prevSlide}
                     className='w-14 h-14 rounded-full border border-white/30 flex items-center justify-center bg-white text-red-700 transition-all backdrop-blur-sm'
