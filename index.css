@@ -1,0 +1,145 @@
+/* @keyframes zalo-shake {
+    0% {
+        transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+    2% {
+        transform: translateY(-50%) scale(1.05) rotate(-15deg);
+    }
+    4% {
+        transform: translateY(-50%) scale(1.05) rotate(15deg);
+    }
+    6% {
+        transform: translateY(-50%) scale(1.05) rotate(-12deg);
+    }
+    8% {
+        transform: translateY(-50%) scale(1.05) rotate(12deg);
+    }
+    10% {
+        transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) scale(1) rotate(0deg);
+    }
+}
+
+@keyframes zalo-halo {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.6;
+    }
+    60% {
+        transform: scale(1.6);
+        opacity: 0.15;
+    }
+    100% {
+        transform: scale(2.1);
+        opacity: 0;
+    }
+}
+
+.zalo-float {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 95;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #0068ff;
+    box-shadow: 0 12px 30px rgba(0, 104, 255, 0.35);
+
+    animation: zalo-shake 4s infinite;
+}
+
+.zalo-float:hover {
+    animation-play-state: paused;
+    transform: translateY(-50%) scale(1.08);
+} */
+
+/* Container nút Zalo */
+.zalo-float {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 95;
+
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+
+    background-color: #0068ff; /* Zalo blue */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 20px rgba(0, 104, 255, 0.35);
+    cursor: pointer;
+
+    animation:
+        zalo-shake 4.5s infinite ease-in-out,
+        zalo-glow 3.5s infinite ease-out;
+}
+
+/* Icon bên trong */
+.zalo-float img {
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+}
+
+/* ===== RUNG LẮC ===== */
+@keyframes zalo-shake {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    2% {
+        transform: translateY(-50%) rotate(-15deg);
+    }
+    4% {
+        transform: translateY(-50%) rotate(15deg);
+    }
+    6% {
+        transform: translateY(-50%) rotate(-10deg);
+    }
+    8% {
+        transform: translateY(-50%) rotate(10deg);
+    }
+    10% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+}
+
+/* ===== HÀO QUANG LAN RA ===== */
+@keyframes zalo-glow {
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(0, 136, 255, 0.35),
+            0 0 0 8px rgba(0, 136, 255, 0.25),
+            0 0 0 16px rgba(0, 136, 255, 0.15);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 16px rgba(0, 136, 255, 0),
+            0 0 0 32px rgba(0, 136, 255, 0),
+            0 0 0 48px rgba(0, 136, 255, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(0, 136, 255, 0),
+            0 0 0 0 rgba(0, 136, 255, 0),
+            0 0 0 0 rgba(0, 136, 255, 0);
+    }
+}
